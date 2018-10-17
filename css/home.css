@@ -18,7 +18,11 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
   
-  .starter-template {
-    padding: 3rem 1.5rem;
-    text-align: center;
-  }
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+  
+.centerme {
+	text-align: center;
+}
