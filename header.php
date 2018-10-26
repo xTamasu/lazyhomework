@@ -1,3 +1,27 @@
+    <script>
+    
+    var myVar;
+
+    function loader() {
+      myVar = setTimeout(showPage, 350);
+    }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("showNav").style.display = "block";
+      var showPageList = document.getElementsByClassName("showPage");
+	    showPageList[0].style.display = "block";
+
+    }
+    
+    </script>
+    
+    <body onload="loader()">
+
+    <link href="css/loader.css" rel="stylesheet">
+    <div id="loader"></div>
+    <div style="display:none;" id="showNav">
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,3 +60,4 @@
         </ul>
       </div>
     </nav>
+  </div>
