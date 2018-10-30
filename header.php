@@ -47,7 +47,7 @@
             <a class="nav-link" href="stundenplan.php">Stundenplan</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link disabled" href="logout.php">Logout</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>

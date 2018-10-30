@@ -1,6 +1,6 @@
 <?php
 
-include ("connector.php");
+	include ("connector.php");
 
 	function newDefaultEntry($servername, $username, $password, $dbname, $inputFach, $inputAufgabe, $inputVon, $inputBis)
 	{

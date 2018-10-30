@@ -1,3 +1,6 @@
+<?php include ("checklogin.php"); ?>
+
+
 <!doctype html>
 <html lang="en">
 
