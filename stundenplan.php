@@ -26,9 +26,9 @@
 					<tr>
 						<td>07:30<br/>08:15</td>
 						<!-- Uhrzeit -->
-						<td></td>
+						<td>Physik<br/>Sommerfeld, Kreißl</td>
 						<!-- Montag -->
-						<td>IT - Java<br/>Fuchs</td>
+						<td>POWI<br/>Büngener</td>
 						<!-- Dienstag -->
 						<td>Mathematik<br/>Duma</td>
 						<!-- Mittwoch -->
@@ -40,81 +40,81 @@
 					<tr>
 						<td>08:15<br/>09:00</td>
 						<!-- Uhrzeit -->
-						<td></td>
+						<td>Physik<br/>Sommerfeld, Kreißl</td>
 						<!-- Montag -->
-						<td>IT - Java<br/>Fuchs</td>
+						<td>POWI<br/>Büngener</td>
 						<!-- Dienstag -->
 						<td>Mathematik<br/>Duma</td>
 						<!-- Mittwoch -->
 						<td>Deutsch<br/>Bock</td>
 						<!-- Donnerstag -->
-						<td></td>
+						<td>IT - NT<br/>Schlegel</td>
 						<!-- Freitag -->
 					</tr>
 					<tr>
 						<td>09:15<br/>10:00</td>
 						<!-- Uhrzeit -->
-						<td>Mathematik<br/>Duma</td>
+						<td>Deutsch<br/>Bock</td>
 						<!-- Montag -->
-						<td>IT - Java<br/>Fuchs</td>
+						<td>IT - Vorbereitung<br/>Fuchs</td>
 						<!-- Dienstag -->
-						<td>IT - Datenbanken<br/>Fuchs</td>
+						<td>IT - Vorbereitung<br/>Fuchs</td>
 						<!-- Mittwoch -->
 						<td>Englisch<br/>Christiani</td>
 						<!-- Donnerstag -->
-						<td>PoWi<br/>Büngener</td>
+						<td>IT - NT<br/>Schlegel</td>
 						<!-- Freitag -->
 					</tr>
 					<tr>
 						<td>10:00<br/>10:45</td>
 						<!-- Uhrzeit -->
-						<td>Mathematik<br/>Duma</td>
+						<td>Deutsch<br/>Bock</td>
 						<!-- Montag -->
-						<td>IT - Java<br/>Fuchs</td>
+						<td>IT - Vorbereitung<br/>Fuchs</td>
 						<!-- Dienstag -->
-						<td>IT - Datenbanken<br/>Fuchs</td>
+						<td>IT - Vorbereitung<br/>Fuchs</td>
 						<!-- Mittwoch -->
 						<td>Englisch<br/>Christiani</td>
 						<!-- Donnerstag -->
-						<td>PoWi<br/>Büngener</td>
+						<td>IT - NT<br/>Schlegel</td>
 						<!-- Freitag -->
 					</tr>
 					<tr>
 						<td>11:00<br/>11:45</td>
 						<!-- Uhrzeit -->
-						<td>Chemie<br/>Schwanke</td>
+						<td>Religon<br/>Schlegel</td>
 						<!-- Montag -->
-						<td>Religion/Ethik<br/>Schlegel</td>
+						<td>Mathematik<br/>Duma</td>
 						<!-- Dienstag -->
-						<td>IT - Datenbanken<br/>Fuchs</td>
+						<td>IT - Vorbereitung<br/>Fuchs</td>
 						<!-- Mittwoch -->
 						<td>Englisch<br/>Christiani</td>
 						<!-- Donnerstag -->
-						<td>Deutsch<br/>Bock</td>
+						<td>Sport<br/>Arjourne</td>
 						<!-- Freitag -->
 					</tr>
 					<tr>
 						<td>11:45<br/>12:30</td>
 						<!-- Uhrzeit -->
-						<td>Chemie<br/>Schwanke</td>
+						<td>Religon<br/>Schlegel</td>
 						<!-- Montag -->
-						<td>Religion/Ethik<br/>Schlegel</td>
+						<td>Mathematik<br/>Duma</td>
 						<!-- Dienstag -->
-						<td>FREISTUNDE</td>
+						<td>IT - Vorbereitung<br/>Fuchs</td>
 						<!-- Mittwoch -->
 						<td>Englisch<br/>Christiani</td>
 						<!-- Donnerstag -->
-						<td>Deutsch<br/>Bock</td>
+						<td>Sport<br/>Arjourne</td>
 						<!-- Freitag -->
 					</tr>
 					<tr>
 						<td>12:30<br/>13:15</td>
 						<!-- Uhrzeit -->
-						<td>FREISTUNDE</td>
+						<td></td>
 						<!-- Montag -->
 						<td></td>
 						<!-- Dienstag -->
-						<td>IT - Netzwerktechnik<br/>Schlegel</td>
+						<td>IT - Vorbereitung<br/>Fuchs</td>
 						<!-- Mittwoch -->
 						<td>FREISTUNDE</td>
 						<!-- Donnerstag -->
@@ -124,11 +124,11 @@
 					<tr>
 						<td>13:15<br/>14:00</td>
 						<!-- Uhrzeit -->
-						<td>M / Förder<br/>Schwanke</td>
+						<td></td>
 						<!-- Montag -->
 						<td></td>
 						<!-- Dienstag -->
-						<td>IT - Netzwerktechnik<br/>Schlegel</td>
+						<td>M / Förder<br/>Dümpelmann</td>
 						<!-- Mittwoch -->
 						<td>IT - HTML<br/>Fuchs</td>
 						<!-- Donnerstag -->
@@ -138,11 +138,11 @@
 					<tr>
 						<td>14:00<br/>14:45</td>
 						<!-- Uhrzeit -->
-						<td>M / Förder<br/>Schwanke</td>
+						<td></td>
 						<!-- Montag -->
 						<td></td>
 						<!-- Dienstag -->
-						<td>IT - Netzwerktechnik<br/>Schlegel</td>
+						<td>M / Förder<br/>Dümpelmann</td>
 						<!-- Mittwoch -->
 						<td>IT - HTML<br/>Fuchs</td>
 						<!-- Donnerstag -->
