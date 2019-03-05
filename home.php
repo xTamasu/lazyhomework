@@ -55,7 +55,7 @@
 
 				<?php
 				$conn = new mysqli( $servername, $username, $password, $dbname );
-				$sql = "SELECT * FROM `hausaufgaben` WHERE DATE(Bis) > DATE(NOW()-1)";
+				$sql = "SELECT * FROM `Hausaufgaben` WHERE DATE(Bis) > DATE(NOW()-1)";
 				if ( $conn->connect_error ) {
 					die( "Connection failed: " . $conn->connect_error );
 				}
