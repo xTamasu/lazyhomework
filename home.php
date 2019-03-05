@@ -55,7 +55,7 @@
 
 				<?php
 				$conn = new mysqli( $servername, $username, $password, $dbname );
-				$sql = "SELECT * FROM Hausaufgaben";
+				$sql = "SELECT * FROM `hausaufgaben` WHERE DATE(Bis) > DATE(NOW()-1)";
 				if ( $conn->connect_error ) {
 					die( "Connection failed: " . $conn->connect_error );
 				}
@@ -64,9 +64,12 @@
 					while ( $row = $result->fetch_assoc() ) {
 
 						echo "<tr><td>" . $row[ "Fach" ] . "</td>";
-						echo "<td>" . $row[ "Aufgabe" ] . "</td>";
-						echo "<td>" . $row[ "Datum" ] . "</td>";
-						echo "<td>" . $row[ "Bis" ] . "</td>";
+						$task = utf8_decode($row[ "Aufgabe" ]);
+						echo "<td>" . $task . "</td>";
+						$date = date_create($row["Datum"]);
+						echo "<td>" . date_format($date, 'd.m.Y') . "</td>";
+						$bis = date_create($row["Bis"]);
+						echo "<td>" . date_format($bis, 'd.m.Y') . "</td>";
 						echo "<td style=\"width:50px;\"><form method=\"post\" action=\"functions.php\"><button type=\"submit\" name=\"sentDeleteEntry\" value=\"" . $row[ "ID" ] . "\" class=\"btn btn-outline-danger\" type=\"submit\">Löschen</button></form></td></tr>";
 					}
 				} else {
