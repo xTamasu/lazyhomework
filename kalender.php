@@ -15,14 +15,6 @@
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          header:{
-            right: 'entry, today, prev, next',
-            center: '',
-            left: 'title'
-          },
-          events: 'getCalendarData.php',
-          selectable:true,
-          selectHelper:true,
           locale: 'de',
           plugins: [ 'dayGrid' ]
         });

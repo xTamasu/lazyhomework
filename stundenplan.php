@@ -9,6 +9,7 @@
 
 <body>
 	<?php include ("header.php"); ?>
+
 	<main role="main" class="container">
 		<div style="display:none;" class="showPage animate-bottom">
 			<div class="starter-template">
