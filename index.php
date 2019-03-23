@@ -31,20 +31,20 @@
 				}
 			?>
 			</p>
-			<h1 class="h3 mb-3 font-weight-normal" style="color: white">Anmeldung</h1>
+			<h1 class="h3 mb-3 font-weight-normal" style="color: #EBF4F5">Anmeldung</h1>
 			<label for="inputUsername" class="sr-only">Username</label>
 			<input type="username" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
 			<label for="inputPassword" class="sr-only">Password</label>
 			<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 			<div class="checkbox mb-3">
-				<label style="color: white">
+				<label style="color: #EBF4F5">
             <input type="checkbox" value="remember-me"> Anmeldung merken
           </label>
 			
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='loginLogic.php'">Anmelden</button>
 			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='register.php'">Registrieren</button>
-			<p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+			<p class="mt-5 mb-3 text-muted" style="color: #EBF4F5">&copy; 2017-2019</p>
 		</form>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
