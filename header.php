@@ -33,6 +33,11 @@
 
 		<!-- Custom styles for this template -->
 		<link href="css/home.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/calender.css">
+		<link href='calendar/core/main.css' rel='stylesheet' />
+    	<link href='calendar/daygrid/main.css' rel='stylesheet' />
+
+		<!-- Needed scripts -->
 
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
 			<a class="navbar-brand" href="home.php"><img width="30px" src="img/lazyHomework_logo_klein_hell.png"></a>
@@ -58,6 +63,7 @@
 					<li class="nav-item">
 						<a class="nav-link" href="settings.php">Einstellungen</a>
 					</li>
+					<hr noshade style="background-color: white; height: 12px; width: 2px;">
 				</ul>
 			</div>
 		</nav>

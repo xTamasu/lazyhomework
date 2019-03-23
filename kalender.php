@@ -3,15 +3,38 @@
 
 <head>
 <link rel="shortcut icon" href="img/lazyHomework_favicon.png" type="image/png" />
-
 	<meta charset="utf-8">
 	<title>LH | Anmeldung</title>
+
+    <script src='calendar/core/main.js'></script>
+    <script src='calendar/daygrid/main.js'></script>
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          plugins: [ 'dayGrid' ]
+        });
+
+        setTimeout(function(){
+        calendar.render();
+        }, 360);
+      });
+
+    </script>
+
 </head>
 
 <body>
 	<?php include ("header.php"); ?>
 
-
+	<main role="main" class="container">
+		<div style="display:none;" class="showPage animate-bottom">
+      <div id="calendar">
+      </div>
+		</div>
+	</main>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
