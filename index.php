@@ -44,7 +44,7 @@
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='loginLogic.php'">Anmelden</button>
 			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='register.php'">Registrieren</button>
-			<p class="mt-5 mb-3 text-muted" style="color: #EBF4F5">&copy; 2019</p>
+			<p class="mt-5 mb-3 text-muted" style="color: #EBF4F5"><?php echo "&copy;" . date("Y")?></p>
 		</form>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
