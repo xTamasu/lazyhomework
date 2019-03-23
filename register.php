@@ -36,7 +36,7 @@
 		</div>
 		<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='index.php'">Registrieren</button>
 		<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='index.php'">Zur Anmeldung</button>
-		<p class="mt-5 mb-3 text-muted" sytle="color: #EBF4F5">&copy; 2017-2019</p>
+		<p class="mt-5 mb-3 text-muted" sytle="color: #EBF4F5">&copy; 2019</p>
 	</form>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
