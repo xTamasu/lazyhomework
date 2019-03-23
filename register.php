@@ -22,21 +22,21 @@
 <body class="text-center" background="img/BG10.jpg">
 	<form class="form-signin">
 		<img class="mb-4" src="img/lazyHomework_logo_hell.png" alt="" width="300">
-		<h1 class="h3 mb-3 font-weight-normal" style="color: white">Registrierung</h1>
+		<h1 class="h3 mb-3 font-weight-normal" style="color: #EBF4F5">Registrierung</h1>
 
-		<input type="username" id="inputUsername" class="form-control" style="color: white" placeholder="Benutzername" required autofocus>
+		<input type="username" id="inputUsername" class="form-control" style="color: #282E35" placeholder="Benutzername" required autofocus>
 
-		<input type="email" id="inputEmail" class="form-control" placeholder="E-Mail Adresse" required autofocus>
+		<input type="email" id="inputEmail" class="form-control" style="color: #282E35" placeholder="E-Mail Adresse" required autofocus>
 
-		<input type="password" id="inputPassword" class="form-control" placeholder="Passwort" required>
+		<input type="password" id="inputPassword" class="form-control" style="color: #282E35" placeholder="Passwort" required>
 
-		<input type="password" id="inputPasswordVerify" class="form-control" placeholder="Passwort bestätigen" required>
+		<input type="password" id="inputPasswordVerify" class="form-control" style="color: #282E35" placeholder="Passwort bestätigen" required>
 
 		<div class="checkbox mb-3">
 		</div>
 		<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='index.php'">Registrieren</button>
 		<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='index.php'">Zur Anmeldung</button>
-		<p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+		<p class="mt-5 mb-3 text-muted" sytle="color: #EBF4F5">&copy; 2017-2019</p>
 	</form>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
