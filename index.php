@@ -19,17 +19,17 @@
 		<form class="form-signin">
 			<img class="mb-4" src="img/lazyHomework_logo_hell.png" alt="" width="250">
 			<h1 class="h3 mb-3 font-weight-normal" style="color: white">Anmeldung</h1>
-			<label for="inputEmail" class="sr-only">Email address</label>
-			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+			<label for="inputUsername" class="sr-only">Username</label>
+			<input type="username" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
 			<label for="inputPassword" class="sr-only">Password</label>
-			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+			<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 			<div class="checkbox mb-3">
 				<label style="color: white">
             <input type="checkbox" value="remember-me"> Anmeldung merken
           </label>
 			
 			</div>
-			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='home.php'">Anmelden</button>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='loginLogic.php'">Anmelden</button>
 			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='register.php'">Registrieren</button>
 			<p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
 		</form>
