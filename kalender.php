@@ -8,16 +8,18 @@
 
     <script src='calendar/core/main.js'></script>
     <script src='calendar/daygrid/main.js'></script>
+    <script src='calendar/core/locales/de.js'></script>
 
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
+          locale: 'de',
           plugins: [ 'dayGrid' ]
         });
 
-        setTimeout(function(){
+        setTimeout(function(){ // Wartet 360 ms sonst wird der Kalender beim ersten mal nicht richtig angezeigt
         calendar.render();
         }, 360);
       });
