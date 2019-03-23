@@ -16,8 +16,21 @@
 	<link href="css/signin.css" rel="stylesheet">
 
 	<body class="text-center" background="img/BG10.jpg">
-		<form class="form-signin">
+		<form action="loginLogic.php" method="post" class="form-signin">
 			<img class="mb-4" src="img/lazyHomework_logo_hell.png" alt="" width="250">
+			<p>
+			<?php 
+				$e = $_GET['e']; // e = error, wp = wrong password, ne = no entry
+				if($e == 'wp') 
+				{
+					echo "Falscher Benutzername oder Passwort!";
+				}
+				if($e == 'ne') 
+				{
+					echo "Keine Eingabe!";
+				}
+			?>
+			</p>
 			<h1 class="h3 mb-3 font-weight-normal" style="color: white">Anmeldung</h1>
 			<label for="inputUsername" class="sr-only">Username</label>
 			<input type="username" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
