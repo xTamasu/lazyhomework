@@ -54,8 +54,9 @@
 				<?php // WICHTIG DAMIT DIE FARB FORMATION EINGEHALTEN WIRD!!! ?>
 
 				<?php
+				$e = false;
 				$conn = new mysqli( $servername, $username, $password, $dbname );
-				$sql = "SELECT * FROM `Hausaufgaben` WHERE DATE(Bis) > DATE(NOW()-1)";
+				$sql = "SELECT * FROM `hausaufgaben` WHERE DATE(Bis) > DATE(NOW()-1)";
 				if ( $conn->connect_error ) {
 					die( "Connection failed: " . $conn->connect_error );
 				}
@@ -73,7 +74,7 @@
 						echo "<td style=\"width:50px;\"><form method=\"post\" action=\"functions.php\"><button type=\"submit\" name=\"sentDeleteEntry\" value=\"" . $row[ "ID" ] . "\" class=\"btn btn-outline-danger\" type=\"submit\">Löschen</button></form></td></tr>";
 					}
 				} else {
-					echo "Keine Einträge";
+					$e = true;
 				}
 
 				$conn->close();
@@ -82,6 +83,12 @@
 
 			<button type="button" onclick="showInputs();" class="btn btn-outline-warning">Neuer Eintrag</button>
 			</form>
+			<?php
+				if($e) // Wenn keine Einträge dann "Keine Einträge"
+				{
+					echo "<p class=\"noHomework\">Juhu! Keine Hausaufgaben! &#x1F604</p>";
+				}
+			?>
 
 		</div>
 	</div>
