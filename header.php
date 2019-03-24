@@ -21,6 +21,7 @@
 <body onload="loader()">
 
 	<?php include("checklogin.php"); ?>
+	<?php include("getUserInformation.php"); ?>
 
 	<link href="css/loader.css" rel="stylesheet">
 	<div id="loader"></div>
@@ -61,11 +62,29 @@
 					<li class="nav-item">
 						<a class="nav-link" href="kalender.php">Kalender</a>
 					</li>
-					<hr noshade style="background-color: white; height: 12px; width: 2px;">
-					<li class="nav-item">
-						<a class="nav-link" href="settings.php">Einstellungen</a>
-					</li>
-					<hr noshade style="background-color: white; height: 12px; width: 2px;">
+					<?php
+
+					foreach($conn->query
+					(
+					"SELECT User.SessionID, Gruppen.gruppe_ID, Gruppen.name, Gruppen.canEditHomework, Gruppen.canEditSettings FROM `User`
+					JOIN Gruppen ON User.Gruppe = Gruppen.gruppe_ID
+					WHERE SessionID = '" . session_id() . "'"
+					) as $userinformation)
+					{
+						$canEditSettings = $userinformation['canEditSettings'];
+					}
+
+					if($canEditSettings == 1)
+					{
+						echo
+						("	<hr noshade style=\"background-color: white; height: 12px; width: 2px;\">
+							<li class=\"nav-item\">
+							<a class=\"nav-link\" href=\"settings.php\">Einstellungen</a>
+							</li>
+							<hr noshade style=\"background-color: white; height: 12px; width: 2px;\">"
+						);
+					}
+					?>
 				</ul>
 			</div>
 		</nav>
