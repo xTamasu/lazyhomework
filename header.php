@@ -20,6 +20,8 @@
 
 <body onload="loader()">
 
+	<?php include("checklogin.php"); ?>
+
 	<link href="css/loader.css" rel="stylesheet">
 	<div id="loader"></div>
 	<div style="display:none;" id="showNav">

@@ -20,6 +20,8 @@
 			<img class="mb-4" src="img/lazyHomework_logo_hell.png" alt="" width="250">
 			<p>
 			<?php 
+			if(isset($_GET['e']))
+			{
 				$e = $_GET['e']; // e = error, wp = wrong password, ne = no entry
 				if($e == 'wp') 
 				{
@@ -29,6 +31,8 @@
 				{
 					echo "Keine Eingabe!";
 				}
+			}
+
 			?>
 			</p>
 			<h1 class="h3 mb-3 font-weight-normal" style="color: #EBF4F5">Anmeldung</h1>

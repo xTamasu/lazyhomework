@@ -2,7 +2,7 @@
 
 <?php
 session_start();
-include ("connector.php");
+include("connector.php");
 $username = $_POST['username'];
 $password = $_POST['password'];
 
@@ -16,10 +16,15 @@ if (isset($username) && isset($password))
 		$row['Benutzername']." ".$row['Passwort']."<br />";
 		$row['Benutzername']."<br /><br />";
 	}
-	
-	if (@$row['Benutzername'] == $username && $row['Passwort'] == $password)
+
+	/*echo "Passwort:" . "\"". $password . "\" ";
+	echo "Aus der Datenbank:"  . "\"". $row['Passwort'] . "\" ";
+	$verified = false;
+
+	echo password_hash($password, PASSWORD_DEFAULT);*/
+
+	if (@$row['Benutzername'] == $username && password_verify($password, $row['Passwort']))
 	{
-		
 		
 		$Sessioito = session_id();
 		//echo 'Hello ' . htmlspecialchars($_COOKIE["name"]) . '!';
@@ -32,7 +37,7 @@ if (isset($username) && isset($password))
 		
 		
  		
-		header("Location:home.php");
+		header("Location:home.php"); // Alles erfolgreich
 		//echo (session_id());
 		//exit();
 		
