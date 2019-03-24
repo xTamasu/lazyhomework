@@ -85,6 +85,13 @@
 						);
 					}
 					?>
+					<li class="nav-item">
+						<a class="nav-link" href="datenschutz.php">Datenschutz</a>
+					</li>
+					<hr noshade style="background-color: white; height: 12px; width: 2px;">
+					<li class="nav-item">
+						<a class="nav-link" href="impressum.php">Impressum</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
