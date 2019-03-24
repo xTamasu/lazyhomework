@@ -1,14 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html>
 
 <head>
 <link rel="shortcut icon" href="img/lazyHomework_favicon.png" type="image/png" />
-
-	<title>LH | Stundenplan</title>
+	<meta charset="utf-8">
+	<title>LH | Einstellungen</title>
 </head>
 
 <body>
 	<?php include ("header.php"); ?>
+
+	<?php
+	if($canEditSettings == 0) // Verhindert dass User ohne Rechte in die Einstellungen kommen
+	{
+		header("Location:home.php");
+	}
+	?>
 
 	<main role="main" class="container">
 		<div style="display:none;" class="showPage animate-bottom">
