@@ -3,11 +3,14 @@
 
 <head>
 <link rel="shortcut icon" href="img/lazyHomework_favicon.png" type="image/png" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<meta charset="utf-8">
 	<title>LH | Einstellungen</title>
 </head>
 
 <body>
+	<link href="css/settings.css" rel="stylesheet">
+	
 	<?php include ("header.php"); ?>
 
 	<?php
@@ -22,28 +25,22 @@
 			<div class="starter-template">
 				<img class="mb-4 centerme" src="img/lazyHomework_Logo.png" alt="" width="250">
 				<div class="settings">
-					<label>
-				Neuen Schüler anlegen:
+				<label class="h5">
+				Registrierungstoken:
 				</label>
 					<form>
-						<label for="username">Username:</label>
-						<select name="formUsername">
-							<option value="">Benutzer...</option>
-						</select>
-						<select name="formRechte">
-							<option value="">Rechte...</option>
-							<option value="Admin">Admin</option>
-							<option value="Lehrer">Lehrer</option>
-							<option value="Schueler">Schüler</option>
-						</select>
-						<input type="submit" value="Ändern">
+						<label for="username">Token:
+					<input id="token" type="text" name="token" disabled>
+				</label>
+						<button class="btn"><i class="far fa-copy"></i></button>
+						<button class="btn"><i class="fas fa-sync-alt"></i></button>
 					</form>
 				</div>
 				
 				
 				
 				<div class="settings">
-				<label>
+				<label class="h5">
 				Benutzerrechte:
 				</label>
 					<form>
@@ -57,43 +54,59 @@
 							<option value="Schueler">Schüler</option>
 						</select>
 
-						<input type="submit" value="Ändern">
+						<input class="btn" type="submit" value="Ändern">
 					</form>
 				</div>
 				
 				
 				<div class="settings">
-				<label>
+				<label class="h5">
 				Gruppen verwalten:
 				</label>
 				<form>
-					<label for="username">Gruppe:
-				</label>
-					<select name="formRechte">
-						<option value="">Auswählen...</option>
-						<option value="Admin">Admin</option>
-						<option value="Lehrer">Lehrer</option>
-						<option value="Schueler">Schüler</option>
-					</select>
-					<input type="submit" value="Ändern">
-					</div>
-					
-					
-					<div class="settings">
-						<table>
-							<tr align="center">
-								<th>Alles</th>
-								<th>Test2</th>
-								<th>Test3</th>
-							</tr>
-							<tr align="center">
-								<td><input type="checkbox" id="alter" name="alter">
-								</td>
-								<td><input type="checkbox" id="alter" name="alter">
-								</td>
-								<td><input type="checkbox" id="alter" name="alter">
-								</td>
+						<table class="table-fill">
+							<thead>
+								<tr>
+									<th class="text-center">Gruppe</th>
+									<th class="text-center">Hausaufgaben</th>
+									<th class="text-center">Einloggen</th>
+									<th class="text-center">Einstellungen</th>
+								</tr>
+							</thead>
+							<tbody class="table-hover">
+								<tr>
+									<td class="text-center"><label>Schüler</label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+								</tr>
+								<tr>
+									<td class="text-center"><label>Priv. Schüler</label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+								</tr>
+								<tr>
+									<td class="text-center"><label>Lehrer</label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+								</tr>
+								<tr>
+									<td class="text-center"><label>Admin</label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+								</tr>
+								<tr>
+									<td class="text-center"><label>Ausgeschlossen</label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+								</tr>
+							</tbody>
 						</table>
+						<input class="btn" type="submit" value="Änderung speichern">
 					</div>
 				</form>
 				</div>
