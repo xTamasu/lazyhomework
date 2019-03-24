@@ -14,9 +14,12 @@
 		<div style="display:none;" class="showPage animate-bottom">
       <div id="datenschutz">
       </div>
-      
-      
-      
+      <div class="starter-template">
+      	<img class="mb-4 centerme" src="img/lazyHomework_logo_dunkel.png" alt="" width="250">
+		</div>
+		
+		
+		
 		</div>
 	</main>
 
