@@ -56,7 +56,7 @@
 							<input type="date" name="dateBis">
 						</td>
 						<td>
-							<button type="submit" name="sentNewEntry" class="btn btn-outline-warning" type="submit">Neuer Eintrag</button>
+							<button type="submit" name="sentNewEntry" class="btn btnnewentry" type="submit">Neuer Eintrag</button>
 						</td>
 					</form>
 				</tr>
@@ -83,7 +83,7 @@
 						echo "<td>" . date_format($date, 'd.m.Y') . "</td>";
 						$bis = date_create($row["Bis"]);
 						echo "<td>" . date_format($bis, 'd.m.Y') . "</td>";
-						echo "<td style=\"width:50px;\"><form method=\"post\" action=\"functions.php\"><button type=\"submit\" name=\"sentDeleteEntry\" value=\"" . $row[ "HausaufgabenID" ] . "\" class=\"btn btn-outline-danger\" type=\"submit\">Löschen</button></form></td></tr>";
+						echo "<td style=\"width:50px;\"><form method=\"post\" action=\"functions.php\"><button type=\"submit\" name=\"sentDeleteEntry\" value=\"" . $row[ "HausaufgabenID" ] . "\" class=\"btn btndelete\" type=\"submit\">Löschen</button></form></td></tr>";
 					}
 				} else {
 					$e = true;
@@ -93,7 +93,7 @@
 				?>
 			</table>
 
-			<button type="button" onclick="showInputs();" class="btn btn-outline-warning">Neuer Eintrag</button>
+			<button type="button" onclick="showInputs();" class="btn btnnewentry">Neuer Eintrag</button>
 			</form>
 			<?php
 				if($e) // Wenn keine Einträge dann "Keine Einträge"
