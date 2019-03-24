@@ -4,7 +4,7 @@
 <head>
 <link rel="shortcut icon" href="img/lazyHomework_favicon.png" type="image/png" />
 	<meta charset="utf-8">
-	<title>LH | Anmeldung</title>
+	<title>LH | Kalender</title>
 
     <script src='calendar/core/main.js'></script>
     <script src='calendar/daygrid/main.js'></script>
