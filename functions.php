@@ -10,7 +10,7 @@
 			die("Connection failed: " . $conn->connect_error);
 		}
 	
-		$sql = "INSERT INTO Hausaufgaben (ID,Fach,Aufgabe,Datum,Bis) VALUES (NULL, '" . $inputFach . "', '" . $inputAufgabe . "', '" . $inputVon . "', '" . $inputBis . "')";
+		$sql = "INSERT INTO Hausaufgaben (FachID,Aufgabe,Datum,Bis) VALUES ('" . $inputFach . "', '" . $inputAufgabe . "', '" . $inputVon . "', '" . $inputBis . "')";
 		$conn->query($sql);
 	
 		echo "A new Entry was created!";
@@ -25,7 +25,7 @@
 			die("Connection failed: " . $conn->connect_error);
 		}
 	
-		$sql = "DELETE FROM Hausaufgaben WHERE ID=" . $deleteId;
+		$sql = "DELETE FROM Hausaufgaben WHERE HausaufgabenID=" . $deleteId;
 		$conn->query($sql);
 	
 		echo "Entry with ID: " . $deleteId . " was deleted.";

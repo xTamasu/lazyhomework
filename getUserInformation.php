@@ -1,7 +1,7 @@
 <?php
 foreach($conn->query
 (
-"SELECT User.SessionID, Gruppen.* FROM `User` JOIN Gruppen ON User.Gruppe = Gruppen.gruppe_ID WHERE SessionID = '" . session_id() . "'"
+"SELECT User.SessionID, Gruppen.* FROM `User` JOIN Gruppen ON User.GruppeID = Gruppen.gruppe_ID WHERE SessionID = '" . session_id() . "'"
 ) as $userinformation)
 {
 	$sessionid = $userinformation['SessionID'];
