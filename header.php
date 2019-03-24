@@ -94,5 +94,7 @@
 					</li>
 				</ul>
 			</div>
+			
+			<img src="img/icons/Icon_user32.png"></img>
 		</nav>
 	</div>
