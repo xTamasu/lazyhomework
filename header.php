@@ -21,6 +21,7 @@
 <body onload="loader()">
 
 	<?php include("checklogin.php"); ?>
+	<?php include("getUserInformation.php"); ?>
 
 	<link href="css/loader.css" rel="stylesheet">
 	<div id="loader"></div>
