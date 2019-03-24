@@ -67,7 +67,7 @@
 					foreach($conn->query
 					(
 					"SELECT User.SessionID, Gruppen.gruppe_ID, Gruppen.name, Gruppen.canEditHomework, Gruppen.canEditSettings FROM `User`
-					JOIN Gruppen ON User.Gruppe = Gruppen.gruppe_ID
+					JOIN Gruppen ON User.GruppeID = Gruppen.gruppe_ID
 					WHERE SessionID = '" . session_id() . "'"
 					) as $userinformation)
 					{

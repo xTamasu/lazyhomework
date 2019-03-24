@@ -36,15 +36,27 @@
 
 				<tr class="hiddenByJavaScript" style="background-color: white;">
 					<form action="functions.php" method="post">
-						<td><input type="text" name="fach">
+						<td>
+							<select name="fach">
+							<?php 
+								foreach ($conn->query("SELECT * FROM Faecher") as $faecher) 
+								{
+									echo "<option name=\"fach\" value=\"" . $faecher['FachID'] . "\">" . $faecher['fach'] ."</option>";
+								}
+							?>
+							</select>
 						</td>
-						<td><input type="text" name="aufgabe">
+						<td>
+							<input type="text" name="aufgabe">
 						</td>
-						<td><input type="date" name="dateVon">
+						<td>
+							<input type="date" name="dateVon">
 						</td>
-						<td><input type="date" name="dateBis">
+						<td>
+							<input type="date" name="dateBis">
 						</td>
-						<td><button type="submit" name="sentNewEntry" class="btn btn-outline-warning" type="submit">Neuer Eintrag</button>
+						<td>
+							<button type="submit" name="sentNewEntry" class="btn btn-outline-warning" type="submit">Neuer Eintrag</button>
 						</td>
 					</form>
 				</tr>
@@ -56,7 +68,7 @@
 				<?php
 				$e = false;
 				$conn = new mysqli( $servername, $username, $password, $dbname );
-				$sql = "SELECT * FROM `Hausaufgaben` WHERE DATE(Bis) > DATE(NOW()-1)";
+				$sql = "SELECT * FROM `hausaufgaben` JOIN faecher ON hausaufgaben.FachID = faecher.FachID WHERE DATE(Bis) > DATE(NOW()-1)";
 				if ( $conn->connect_error ) {
 					die( "Connection failed: " . $conn->connect_error );
 				}
@@ -64,14 +76,14 @@
 				if ( $result->num_rows > 0 ) {
 					while ( $row = $result->fetch_assoc() ) {
 
-						echo "<tr><td>" . $row[ "Fach" ] . "</td>";
+						echo "<tr><td>" . $row[ "fach" ] . "</td>";
 						$task = utf8_decode($row[ "Aufgabe" ]);
 						echo "<td>" . $task . "</td>";
 						$date = date_create($row["Datum"]);
 						echo "<td>" . date_format($date, 'd.m.Y') . "</td>";
 						$bis = date_create($row["Bis"]);
 						echo "<td>" . date_format($bis, 'd.m.Y') . "</td>";
-						echo "<td style=\"width:50px;\"><form method=\"post\" action=\"functions.php\"><button type=\"submit\" name=\"sentDeleteEntry\" value=\"" . $row[ "ID" ] . "\" class=\"btn btn-outline-danger\" type=\"submit\">Löschen</button></form></td></tr>";
+						echo "<td style=\"width:50px;\"><form method=\"post\" action=\"functions.php\"><button type=\"submit\" name=\"sentDeleteEntry\" value=\"" . $row[ "HausaufgabenID" ] . "\" class=\"btn btn-outline-danger\" type=\"submit\">Löschen</button></form></td></tr>";
 					}
 				} else {
 					$e = true;
