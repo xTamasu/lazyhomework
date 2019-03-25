@@ -15,7 +15,7 @@
 	<!-- Custom styles for this template -->
 	<link href="css/signin.css" rel="stylesheet">
 
-	<body class="text-center" background="img/BG10.jpg">
+	<body class="text-center">
 		<form action="loginLogic.php" method="post" class="form-signin">
 			<img class="mb-4" src="img/lazyHomework_logo_hell.png" alt="" width="250">
 			<p>
