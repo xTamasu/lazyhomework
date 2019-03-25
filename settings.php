@@ -24,8 +24,8 @@
 	
 	foreach($conn->query("SELECT * FROM `Settings`") as $settings)
 	{
-		if($settings['settings_ID'] == "1")
-		$registerToken = $settings['registerToken'];
+		if($settings['settingName'] == "registerToken")
+			$registerToken = $settings['settingValue'];
 	}
 
 	/*foreach($conn->query("SELECT User.Benutzername, Gruppen.name FROM `User` JOIN Gruppen ON User.GruppeID = Gruppen.gruppe_ID") as $userlist)
