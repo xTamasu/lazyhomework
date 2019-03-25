@@ -19,9 +19,9 @@
 
 </head>
 
-<body class="text-center" background="img/BG10.jpg">
+<body class="text-center">
 	<form class="form-signin">
-		<img class="mb-4" src="img/lazyHomework_logo_hell.png" alt="" width="300">
+		<img class="mb-4" src="img/lazyHomework_logo_hell.png" alt="" width="250">
 		<h1 class="h3 mb-3 font-weight-normal" style="color: #EBF4F5">Registrierung</h1>
 
 		<input type="username" id="inputUsername" class="form-control" style="color: #282E35" placeholder="Benutzername" required autofocus>
@@ -32,8 +32,6 @@
 
 		<input type="password" id="inputPasswordVerify" class="form-control" style="color: #282E35" placeholder="Passwort bestätigen" required>
 
-		<div class="checkbox mb-3">
-		</div>
 		<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='index.php'">Registrieren</button>
 		<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='index.php'">Zur Anmeldung</button>
 		<p class="mt-5 mb-3 text-muted" style="color: #EBF4F5"><?php echo "&copy;" . date("Y")?></p>
