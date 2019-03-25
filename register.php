@@ -17,23 +17,58 @@
 	<style>
 	</style>
 
+	<script>
+
+	function check()
+	{
+		
+		if((document.getElementById('inputPassword').value == document.getElementById('inputPasswordVerify').value))
+		{
+			document.getElementById('inputPasswordVerify').setCustomValidity("");
+			document.getElementById('regButton').disabled = false;
+		}
+		else
+		{
+			document.getElementById('inputPasswordVerify').setCustomValidity("Passwörter stimmen nicht überein");
+			document.getElementById('regButton').disabled = true;
+		}
+	}
+
+	</script>
+
 </head>
 
 <body class="text-center">
-	<form class="form-signin">
+	<form action="registerLogic.php" method="post" class="form-signin">
 		<img class="mb-4" src="img/lazyHomework_logo_hell.png" alt="" width="250">
+		<p>
+			<?php 
+			if(isset($_GET['e']))
+			{
+				$e = $_GET['e']; // e = error, at = already taken, wt = wrong token
+				if($e == 'at') 
+				{
+					echo "Benutzername existiert bereits";
+				}
+				if($e == 'wt') 
+				{
+					echo "Falscher Token!";
+				}
+			}
+			?>
+			</p>
 		<h1 class="h3 mb-3 font-weight-normal" style="color: #EBF4F5">Registrierung</h1>
 
-		<input type="username" id="inputUsername" class="form-control" style="color: #282E35" placeholder="Benutzername" required autofocus>
+		<input type="text" name="username" id="inputUsername" class="form-control" style="color: #282E35" placeholder="Benutzername" required autofocus>
 
-		<input type="email" id="inputEmail" class="form-control" style="color: #282E35" placeholder="E-Mail Adresse" required autofocus>
+		<input type="text" name="token" id="inputToken" class="form-control" style="color: #282E35" placeholder="Klassentoken" required>
 
-		<input type="password" id="inputPassword" class="form-control" style="color: #282E35" placeholder="Passwort" required>
+		<input type="password" name="password" id="inputPassword" onkeyup='check()' class="form-control" style="color: #282E35" placeholder="Passwort" required>
 
-		<input type="password" id="inputPasswordVerify" class="form-control" style="color: #282E35" placeholder="Passwort bestätigen" required>
+		<input type="password" id="inputPasswordVerify" onkeyup='check()' class="form-control" style="color: #282E35" placeholder="Passwort bestätigen" required>
 
-		<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='index.php'">Registrieren</button>
-		<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='index.php'">Zur Anmeldung</button>
+		<button type="submit" id="regButton" class="btn btn-lg btn-primary btn-block">Registrieren</button>
+		<button class="btn btn-lg btn-primary btn-block" type="button" onclick="window.location.href='index.php'">Zur Anmeldung</button>
 		<p class="mt-5 mb-3 text-muted" style="color: #EBF4F5"><?php echo "&copy;" . date("Y")?></p>
 	</form>
 	<!-- Optional JavaScript -->

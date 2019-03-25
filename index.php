@@ -22,7 +22,7 @@
 			<?php 
 			if(isset($_GET['e']))
 			{
-				$e = $_GET['e']; // e = error, wp = wrong password, ne = no entry
+				$e = $_GET['e']; // e = error, wp = wrong password, ne = no entry, sr = sucessful registration
 				if($e == 'wp') 
 				{
 					echo "Falscher Benutzername oder Passwort!";
@@ -30,6 +30,10 @@
 				if($e == 'ne') 
 				{
 					echo "Keine Eingabe!";
+				}
+				if($e == 'sr')
+				{
+					echo "Erfolgreiche Registrierung!";
 				}
 			}
 
