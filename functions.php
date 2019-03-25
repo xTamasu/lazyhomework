@@ -36,7 +36,7 @@
 
 	function updateRegisterToken($conn, $token)
 	{
-		$conn->query("UPDATE Settings SET registerToken = '" .$token. "' WHERE settings_ID = '1'");
+		$conn->query("UPDATE Settings SET settingValue = '" .$token. "' WHERE settingName = 'registerToken'");
 		$conn->close();
 		header("Location:settings.php");
 	}
