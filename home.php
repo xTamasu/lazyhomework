@@ -30,7 +30,13 @@
 						<th>Aufgabe</th>
 						<th>Datum</th>
 						<th>Bis</th>
-						<th>Löschen</th>
+						<?php 
+						
+						if($canEditHomework == "1")
+						{
+							echo("<th>Löschen</th>");
+						}
+						?>
 					</form>
 				</tr>
 
@@ -74,8 +80,8 @@
 				}
 				$result = $conn->query( $sql );
 				if ( $result->num_rows > 0 ) {
-					while ( $row = $result->fetch_assoc() ) {
-
+					while ( $row = $result->fetch_assoc() ) 
+					{
 						echo "<tr><td>" . $row[ "fach" ] . "</td>";
 						$task = utf8_decode($row[ "Aufgabe" ]);
 						echo "<td>" . $task . "</td>";
@@ -83,7 +89,10 @@
 						echo "<td>" . date_format($date, 'd.m.Y') . "</td>";
 						$bis = date_create($row["Bis"]);
 						echo "<td>" . date_format($bis, 'd.m.Y') . "</td>";
-						echo "<td style=\"width:50px;\"><form method=\"post\" action=\"functions.php\"><button type=\"submit\" name=\"sentDeleteEntry\" value=\"" . $row[ "HausaufgabenID" ] . "\" class=\"btn btn-outline-danger\" type=\"submit\">Löschen</button></form></td></tr>";
+						if($canEditHomework == "1")
+						{
+							echo "<td style=\"width:50px;\"><form method=\"post\" action=\"functions.php\"><button type=\"submit\" name=\"sentDeleteEntry\" value=\"" . $row[ "HausaufgabenID" ] . "\" class=\"btn btn-outline-danger\" type=\"submit\">Löschen</button></form></td></tr>";
+						}
 					}
 				} else {
 					$e = true;
@@ -93,7 +102,10 @@
 				?>
 			</table>
 
-			<button type="button" onclick="showInputs();" class="btn btn-outline-warning">Neuer Eintrag</button>
+			<?php 
+			if($canEditHomework == "1")
+			echo("<button type=\"button\" onclick=\"showInputs();\" class=\"btn btn-outline-warning\">Neuer Eintrag</button>");
+			?>
 			</form>
 			<?php
 				if($e) // Wenn keine Einträge dann "Keine Einträge"
