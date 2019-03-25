@@ -15,7 +15,7 @@
 	
 		echo "A new Entry was created!";
 		$conn->close();
-		header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . "/home.php");	
+		header("Location:home.php");
 	}
 	
 	function deleteEntry($servername, $username, $password, $dbname, $deleteId)
@@ -31,14 +31,14 @@
 	
 		echo "Entry with ID: " . $deleteId . " was deleted.";
 		$conn->close();
-		header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . "/home.php");	
+		header("Location:home.php");
 	}	
 
 	function updateRegisterToken($conn, $token)
 	{
 		$conn->query("UPDATE Settings SET registerToken = '" .$token. "' WHERE settings_ID = '1'");
 		$conn->close();
-		header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . "/settings.php");
+		header("Location:settings.php");
 	}
 
 	if(isset($_POST['sentNewEntry']))
