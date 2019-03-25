@@ -5,7 +5,7 @@ $token = $_POST['token'];
 $password = $_POST['password'];
 $tokenIsValid = false;
 
-foreach ($conn->query("SELECT settingValue FROM `settings` WHERE settings.settingName = 'registerToken'") as $tokenList) 
+foreach ($conn->query("SELECT settingValue FROM `Settings` WHERE Settings.settingName = 'registerToken'") as $tokenList) 
 {
 	if($tokenList['settingValue'] == $token)
 	{
