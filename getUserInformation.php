@@ -6,6 +6,7 @@ foreach($conn->query
 {
 	$sessionid = $userinformation['SessionID'];
 	$gruppe = $userinformation['gruppe_ID'];
+	$gruppeName = $userinformation['name'];
 	$canEditHomework = $userinformation['canEditHomework'];
 	$canEditSettings = $userinformation['canEditSettings'];
 }

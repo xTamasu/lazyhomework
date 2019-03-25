@@ -95,6 +95,9 @@
 				</ul>
 			</div>
 			
-			<img src="img/icons/Icon_user32.png"></img>
+			<?php
+			echo "<p style=\"margin-right:25px; padding-top:5px; font-size: 16px !important; color: white;\">$gruppeName</p>";
+			echo "<img src=\"img/icons/Icon_" . $gruppeName . "32.png\"></img>"
+			?>
 		</nav>
 	</div>
