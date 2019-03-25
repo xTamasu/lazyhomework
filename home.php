@@ -62,7 +62,7 @@
 							<input type="date" name="dateBis">
 						</td>
 						<td>
-							<button type="submit" name="sentNewEntry" class="btn btn-outline-warning" type="submit">Neuer Eintrag</button>
+							<button type="submit" name="sentNewEntry" class="btn btnnewentry" type="submit">Neuer Eintrag</button>
 						</td>
 					</form>
 				</tr>
