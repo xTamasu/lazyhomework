@@ -20,6 +20,23 @@
 	}
 	?>
 
+	<?php // Liefert alle Settings
+	
+	foreach($conn->query("SELECT * FROM `settings`") as $settings)
+	{
+		if($settings['settings_ID'] == "1")
+		$registerToken = $settings['registerToken'];
+	}
+
+	/*foreach($conn->query("SELECT User.Benutzername, Gruppen.name FROM `User` JOIN Gruppen ON User.GruppeID = Gruppen.gruppe_ID") as $userlist)
+	{
+	}*/
+
+
+
+	
+	?>
+
 	<main role="main" class="container">
 		<div style="display:none;" class="showPage animate-bottom">
 			<div class="starter-template">
@@ -28,12 +45,14 @@
 				<label class="h5">
 				Registrierungstoken:
 				</label>
-					<form>
+					<form method="post">
 						<label for="username">Token:
-					<input id="token" type="text" name="token" disabled>
+					<?php
+					echo("<input id=\"token\" value=\"$registerToken\" type=\"text\" name=\"token\">")
+					?>
 				</label>
-						<button class="btn"><i class="far fa-copy"></i></button>
-						<button class="btn"><i class="fas fa-sync-alt"></i></button>
+						<button type="button" onclick="copyToClipboard()" class="btn"><i style="-webkit-appearance: none;" class="far fa-copy"></i></button>
+						<button type="submit" formaction="functions.php" name="updateRegisterToken" class="btn"><i class="fas fa-sync-alt" style="-webkit-appearance: none;"></i></button>
 					</form>
 				</div>
 				

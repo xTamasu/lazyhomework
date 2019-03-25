@@ -13,6 +13,20 @@
 	}
 </script>
 
+<script>
+	function copyToClipboard() 
+	{
+		/* Get the text field */
+		var copyText = document.getElementById("token");
+
+		/* Select the text field */
+		copyText.select();
+
+		/* Copy the text inside the text field */
+		document.execCommand("copy");
+	} 
+</script>
+
 <head>
 <link rel="shortcut icon" href="img/lazyHomework_favicon.png" type="image/png" />
 </head>
