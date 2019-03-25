@@ -53,15 +53,15 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
 					</li>
-					<hr noshade style="background-color: white; height: 12px; width: 2px;">
+					<!--<hr noshade style="background-color: white; height: 12px; width: 2px;">-->
 					<li class="nav-item">
 						<a class="nav-link" href="stundenplan.php">Stundenplan</a>
 					</li>
-					<hr noshade style="background-color: white; height: 12px; width: 2px;">
+					<!--<hr noshade style="background-color: white; height: 12px; width: 2px;">-->
 					<li class="nav-item">
 						<a class="nav-link" href="kalender.php">Kalender</a>
 					</li>
-					<hr noshade style="background-color: white; height: 12px; width: 2px;">
+					<!--<hr noshade style="background-color: white; height: 12px; width: 2px;">-->
 					<?php
 
 					foreach($conn->query
@@ -81,23 +81,30 @@
 							<li class=\"nav-item\">
 							<a class=\"nav-link\" href=\"settings.php\">Einstellungen</a>
 							</li>
-							<hr noshade style=\"background-color: white; height: 12px; width: 2px;\">"
+							<!--<hr noshade style=\"background-color: white; height: 12px; width: 2px;\">-->"
 						);
 					}
 					?>
 					<li class="nav-item">
 						<a class="nav-link" href="datenschutz.php">Datenschutz</a>
 					</li>
-					<hr noshade style="background-color: white; height: 12px; width: 2px;">
+					<!--<hr noshade style="background-color: white; height: 12px; width: 2px;">-->
 					<li class="nav-item">
 						<a class="nav-link" href="impressum.php">Impressum</a>
 					</li>
 				</ul>
 			</div>
-			
+			<div>
+			<div class="user">
 			<?php
 			echo "<p style=\"margin-right:25px; padding-top:5px; font-size: 16px !important; color: white;\">$gruppeName</p>";
+			?>
+			</div>
+			<div class="user">
+			<?php
 			echo "<img src=\"img/icons/Icon_" . $gruppeName . "32.png\"></img>"
 			?>
+			</div>
+			</div>
 		</nav>
 	</div>
