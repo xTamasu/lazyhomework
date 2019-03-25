@@ -91,7 +91,7 @@
 						echo "<td>" . date_format($bis, 'd.m.Y') . "</td>";
 						if($canEditHomework == "1")
 						{
-							echo "<td style=\"width:50px;\"><form method=\"post\" action=\"functions.php\"><button type=\"submit\" name=\"sentDeleteEntry\" value=\"" . $row[ "HausaufgabenID" ] . "\" class=\"btn btn-outline-danger\" type=\"submit\">Löschen</button></form></td></tr>";
+							echo "<td style=\"width:50px;\"><form method=\"post\" action=\"functions.php\"><button type=\"submit\" name=\"sentDeleteEntry\" value=\"" . $row[ "HausaufgabenID" ] . "\" class=\"btn btndelete\" type=\"submit\">Löschen</button></form></td></tr>";
 						}
 					}
 				} else {
@@ -104,7 +104,7 @@
 
 			<?php 
 			if($canEditHomework == "1")
-			echo("<button type=\"button\" onclick=\"showInputs();\" class=\"btn btn-outline-warning\">Neuer Eintrag</button>");
+			echo("<button type=\"button\" onclick=\"showInputs();\" class=\"btn btnnewentry\">Neuer Eintrag</button>");
 			?>
 			</form>
 			<?php
