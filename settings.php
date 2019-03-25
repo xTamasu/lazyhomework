@@ -22,7 +22,7 @@
 
 	<?php // Liefert alle Settings
 	
-	foreach($conn->query("SELECT * FROM `settings`") as $settings)
+	foreach($conn->query("SELECT * FROM `Settings`") as $settings)
 	{
 		if($settings['settings_ID'] == "1")
 		$registerToken = $settings['registerToken'];
