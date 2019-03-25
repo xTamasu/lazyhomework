@@ -10,7 +10,6 @@
 		document.getElementById( "showNav" ).style.display = "block";
 		var showPageList = document.getElementsByClassName( "showPage" );
 		showPageList[ 0 ].style.display = "block";
-
 	}
 </script>
 
@@ -62,6 +61,7 @@
 					<li class="nav-item">
 						<a class="nav-link" href="kalender.php">Kalender</a>
 					</li>
+					<hr noshade style="background-color: white; height: 12px; width: 2px;">
 					<?php
 
 					foreach($conn->query
@@ -77,7 +77,7 @@
 					if($canEditSettings == 1)
 					{
 						echo
-						("	<hr noshade style=\"background-color: white; height: 12px; width: 2px;\">
+						("	
 							<li class=\"nav-item\">
 							<a class=\"nav-link\" href=\"settings.php\">Einstellungen</a>
 							</li>
