@@ -74,7 +74,7 @@
 				<?php
 				$e = false;
 				$conn = new mysqli( $servername, $username, $password, $dbname );
-				$sql = "SELECT * FROM `hausaufgaben` JOIN faecher ON hausaufgaben.FachID = faecher.FachID WHERE DATE(Bis) > DATE(NOW()-1)";
+				$sql = "SELECT * FROM `Hausaufgaben` JOIN Faecher ON Hausaufgaben.FachID = Faecher.FachID WHERE DATE(Bis) > DATE(NOW()-1)";
 				if ( $conn->connect_error ) {
 					die( "Connection failed: " . $conn->connect_error );
 				}
