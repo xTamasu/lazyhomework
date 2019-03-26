@@ -7,7 +7,7 @@ include ("getUserInformation.php");
 if($canEditSettings == "0")
 {
 	die("Unzureichende Rechte, bitte kontaktiere einen Administrator");
-} // Wirft auf Live eine Fehlermeldung aus Warum?
+} // Funktioniert auf Live nicht, warum?
 
 	function newDefaultEntry($servername, $username, $password, $dbname, $inputFach, $inputAufgabe, $inputVon, $inputBis)
 	{
