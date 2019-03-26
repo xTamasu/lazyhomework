@@ -111,7 +111,7 @@
 			<div>
 			<div class="user">
 			<?php
-			echo "<p style=\"margin-right:25px; padding-top:5px; font-size: 16px !important; color: white;\">$gruppeName</p>";
+			echo "<p style=\"margin-right:25px; padding-top:5px; font-size: 16px !important; color: white;\">".$username . "@" . $gruppeName."</p>";
 			?>
 			</div>
 			<div class="user">
