@@ -28,12 +28,7 @@
 			$registerToken = $settings['settingValue'];
 	}
 
-	/*foreach($conn->query("SELECT User.Benutzername, Gruppen.name FROM `User` JOIN Gruppen ON User.GruppeID = Gruppen.gruppe_ID") as $userlist)
-	{
-	}*/
-
-
-
+	//$allgroups = $conn->query("SELECT * FROM `Gruppen` WHERE Gruppen.name != \"Admin\" AND Gruppen.name != \"Ausgeschlossen\""); SIEHE ZEILE 88
 	
 	?>
 
@@ -48,7 +43,7 @@
 					<form method="post">
 						<label for="username">Token:
 					<?php
-					echo("<input id=\"token\" value=\"$registerToken\" type=\"text\" name=\"token\">")
+					echo("<input id=\"token\" value=\"$registerToken\" type=\"text\" name=\"token\">");
 					?>
 				</label>
 						<button type="button" onclick="copyToClipboard()" class="btn"><i style="-webkit-appearance: none;" class="far fa-copy"></i></button>
@@ -62,22 +57,30 @@
 				<label class="h5">
 				Benutzerrechte:
 				</label>
-					<form>
-						<label for="username">Username:
-					<input id="username" name="username">
+				<form action="functions.php" method="post">
+					<label for="username">Benutzername:
+					<select id="username" name="username">
+					<?php 
+						foreach($conn->query("SELECT User.Benutzername FROM User") as $userlist)
+						{
+							echo("<option value='" . $userlist['Benutzername'] . "'>" . $userlist['Benutzername'] . "</option>");
+						}			
+					?>
+					</select>
 				</label>
-						<select name="formRechte">
-							<option value="">Rechte...</option>
-							<option value="Admin">Admin</option>
-							<option value="Lehrer">Lehrer</option>
-							<option value="Schueler">Schüler</option>
-						</select>
-
-						<input class="btn" type="submit" value="Ändern">
-					</form>
+				<select name="permission" id="permission">
+				<?php
+					foreach($conn->query("SELECT Gruppen.gruppe_ID, Gruppen.name FROM `Gruppen` WHERE Gruppen.name != \"Admin\" AND Gruppen.name != \"Ausgeschlossen\"") as $gruppenlist)
+					{
+						echo("<option value=\"". $gruppenlist['gruppe_ID'] ."\">".$gruppenlist['name']."</option>");
+					}
+				?>
+				</select>
+				<input class="btn" name="changePermission" type="submit" value="Ändern">
+				</form>
 				</div>
-				
-				
+				<?php /* WIRD IN SPÄTERER VERSION EINGEFÜGT NICHT RELEVANT FÜR RELEASE
+				"<!--
 				<div class="settings">
 				<label class="h5">
 				Gruppen verwalten:
@@ -95,33 +98,40 @@
 							<tbody class="table-hover">
 								<tr>
 									<td class="text-center"><label>Schüler</label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<?php
+									foreach($allgroups as $groups1)
+									{
+										$isChecked = "";
+										if($groups1['canEditHomework'] == "1")
+										{
+											$isChecked = "checked";
+										}
+										echo("<td class=\"text-center\"><label class=\"container\"><input type=\"checkbox\"" . $isChecked . "><span class=\"checkmark\"></span></label></td>");
+									}
+									?>
 								</tr>
 								<tr>
-									<td class="text-center"><label>Priv. Schüler</label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<td class="text-center"><label>Erw. Schüler</label></td>
+									<?php
+									foreach($allgroups as $groups2)
+									{
+										$isChecked = "";
+										if($groups2['canEditHomework'] == "1")
+										{
+											$isChecked = "checked";
+										}
+										echo("<td class=\"text-center\"><label class=\"container\"><input type=\"checkbox\"" . $isChecked . "><span class=\"checkmark\"></span></label></td>");
+									}
+									?>
 								</tr>
 								<tr>
 									<td class="text-center"><label>Lehrer</label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-								</tr>
-								<tr>
-									<td class="text-center"><label>Admin</label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-								</tr>
-								<tr>
-									<td class="text-center"><label>Ausgeschlossen</label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
-									<td class="text-center"><label class="container"><input type="checkbox"><span class="checkmark"></span></label></td>
+									<?php
+									foreach($allgroups as $groups3)
+									{
+										echo("<td class=\"text-center\"><label class=\"container\"><input type=\"checkbox\"><span class=\"checkmark\"></span></label></td>");
+									}
+									?>
 								</tr>
 							</tbody>
 						</table>
@@ -129,6 +139,7 @@
 					</div>
 				</form>
 				</div>
+				*/?>
 			</div>
 		</div>
 	</main>

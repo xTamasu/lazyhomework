@@ -1,6 +1,13 @@
 <?php
 
-	include ("connector.php");
+include ("connector.php");
+include ("checkLogin.php");
+include ("getUserInformation.php");
+
+if($canEditSettings != "1")
+{
+	die("Unzureichende Rechte, bitte kontaktiere einen Administrator");
+}
 
 	function newDefaultEntry($servername, $username, $password, $dbname, $inputFach, $inputAufgabe, $inputVon, $inputBis)
 	{
@@ -41,6 +48,21 @@
 		header("Location:settings.php");
 	}
 
+	function changePermission($conn, $usernameToChange, $permission)
+	{
+		if($permission != "5")
+		{
+			// Überprüfung einfügen ob Nutzer der zu änderende Benutzer ein Admin ist, wenn ja, werfe ein Fehler aus.
+			$conn->query("UPDATE User SET GruppeID = '".$permission."' WHERE Benutzername = '".$usernameToChange."'");
+			$conn->close();
+			header("Location: settings.php");
+		}
+		else
+		{
+			die("Ein Fehler ist aufgetreten! Bitte versuche es erneut!");
+		}
+	}
+
 	if(isset($_POST['sentNewEntry']))
 		newDefaultEntry($servername, $username, $password, $dbname, $_POST['fach'], $_POST['aufgabe'], $_POST['dateVon'], $_POST['dateBis']);
 
@@ -49,5 +71,8 @@
 
 	if(isset($_POST['updateRegisterToken']))
 		updateRegisterToken($conn, $_POST['token']);
+
+	if(isset($_POST['changePermission']))
+		changePermission($conn, $_POST['username'], $_POST['permission']);
 
 ?>
