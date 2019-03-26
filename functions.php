@@ -4,7 +4,7 @@ include ("connector.php");
 include ("checkLogin.php");
 include ("getUserInformation.php");
 
-if($canEditSettings != 1)
+if($canEditSettings == "0")
 {
 	die("Unzureichende Rechte, bitte kontaktiere einen Administrator");
 } // Wirft auf Live eine Fehlermeldung aus Warum?
