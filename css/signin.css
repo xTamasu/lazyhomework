@@ -25,7 +25,7 @@ body {
   padding: 15px;
   margin: auto;
   border: 2px solid transparent;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: rgb(40, 46, 53, 1.0);
   color: white;
 }
