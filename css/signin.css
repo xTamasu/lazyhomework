@@ -26,7 +26,7 @@ body {
   margin: auto;
   border: 2px solid transparent;
   border-radius: 5px;
-  background-color: rgb(40, 46, 53, 0.45);
+  background-color: rgb(40, 46, 53, 1.0);
   color: white;
 }
 .form-signin .checkbox {
