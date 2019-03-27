@@ -48,12 +48,8 @@
 			</div>
 			<div>
 				<label for="inputPassword" class="sr-only">Password</label>
-				<input type="password" name="passwor-d" id="inputPassword" class="form-control" placeholder="Password" required>
+				<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 			</div>
-			<div class="checkbox mb-3">
-				<label style="color: #EBF4F5">
-            <input type="checkbox" value="remember-me"> Anmeldung merken
-          </label>
 			
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href='loginLogic.php'">Anmelden</button>
