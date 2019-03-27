@@ -24,7 +24,7 @@
 			<?php 
 			if(isset($_GET['e']))
 			{
-				$e = $_GET['e']; // e = error, wp = wrong password, ne = no entry, sr = sucessful registration
+				$e = $_GET['e']; // e = error, wp = wrong password, ne = no entry, sr = sucessful registration, lo = logout
 				if($e == 'wp') 
 				{
 					echo "Falscher Benutzername oder Passwort!";
@@ -37,7 +37,12 @@
 				{
 					echo "Erfolgreiche Registrierung!";
 				}
+				if($e == 'lo')
+				{
+					echo "Erfolgreich abgemeldet!";
+				}
 			}
+			
 
 			?>
 			</p>
