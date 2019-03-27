@@ -21,32 +21,29 @@ body {
 
 .form-signin {
   width: 100%;
-  max-width: 320px;
+  max-width: 330px;
   padding: 15px;
   margin: auto;
   border: 2px solid transparent;
-  border-radius: 15px;
-  background-color: rgb(40, 46, 53, 1.0);
+  border-radius: 5px;
+  background-color: rgb(40, 46, 53, 0.45);
   color: white;
 }
 .form-signin .checkbox {
   font-weight: 400;
 }
 .form-signin .form-control {
-	color: white;
-	background-color: #1D2127;
   position: relative;
   box-sizing: border-box;
   height: auto;
   padding: 10px;
   font-size: 16px;
-	border-radius: 20px;
 }
 .form-signin .form-control:focus {
   z-index: 2;
 }
 .form-signin input[type="email"] {
-  margin-bottom: 10px;
+  margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
