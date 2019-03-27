@@ -78,6 +78,24 @@
 				</select>
 				<input class="btn" name="changePermission" type="submit" value="Ändern">
 				</form>
+				<label class="h5">
+				Passwort ändern:
+				</label>
+				<form action="functions.php" method="post">
+					<label for="username">Benutzername:
+					<select id="username" name="username">
+					<?php 
+						foreach($conn->query("SELECT User.Benutzername FROM User") as $userlist)
+						{
+							echo("<option value='" . $userlist['Benutzername'] . "'>" . $userlist['Benutzername'] . "</option>");
+						}			
+					?>
+					</select>
+				</label>
+				<input id="newPassword" value="" type="text" name="newPassword" required>
+				</select>
+				<input class="btn" name="changePassword" type="submit" value="Ändern">
+				</form>
 				</div>
 				<?php /* WIRD IN SPÄTERER VERSION EINGEFÜGT NICHT RELEVANT FÜR RELEASE
 				"<!--

@@ -63,6 +63,14 @@ if($canEditSettings == "0")
 		}
 	}
 
+	function changePassword($conn, $usernameToChange, $newPassword)
+	{
+		$newPasswordHashed = password_hash($newPassword, PASSWORD_DEFAULT);
+		$conn->query("UPDATE User SET Passwort = '".$newPasswordHashed."' WHERE Benutzername = '".$usernameToChange."'");
+		$conn->close();
+		header("Location: settings.php");
+	}
+
 	if(isset($_POST['sentNewEntry']))
 		newDefaultEntry($servername, $username, $password, $dbname, $_POST['fach'], $_POST['aufgabe'], $_POST['dateVon'], $_POST['dateBis']);
 
@@ -74,5 +82,8 @@ if($canEditSettings == "0")
 
 	if(isset($_POST['changePermission']))
 		changePermission($conn, $_POST['username'], $_POST['permission']);
+
+	if(isset($_POST['changePassword']))
+		changePassword($conn, $_POST['username'], $_POST['newPassword']);
 
 ?>
